@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ایشان زاده نوین - ارائه‌دهنده وای‌فای</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/heroicons@2.0.18/dist/heroicons.min.css" rel="stylesheet">
+    <style>
+        /* Custom font and direction */
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            direction: rtl;
+        }
+        /* Custom animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .fade-in { animation: fadeIn 1s ease-out; }
+        @keyframes textFade {
+            0%, 20% { opacity: 0; transform: translateY(10px); }
+            25%, 75% { opacity: 1; transform: translateY(0); }
+            80%, 100% { opacity: 0; transform: translateY(-10px); }
+        }
+        .text-cycle { animation: textFade 4s infinite; }
+    </style>
+</head>
+<body class="antialiased bg-gray-100 text-gray-800">
+    <!-- Header -->
+    <header class="bg-blue-900 text-white sticky top-0 z-50 shadow-lg">
+        <nav class="container mx-auto flex items-center justify-between p-4">
+            <div class="text-2xl font-bold">ایشان زاده نوین</div>
+            <div class="hidden md:flex space-x-6">
+
+                <a href="#home" class="hover:text-orange-400 transition ml-5">خانه</a>
+                <a href="#about" class="hover:text-orange-400 transition">درباره ما</a>
+                <a href="#services" class="hover:text-orange-400 transition">خدمات</a>
+                <a href="#plans" class="hover:text-orange-400 transition">طرح‌ها</a>
+                <a href="#coverage" class="hover:text-orange-400 transition">مناطق تحت پوشش</a>
+                <a href="#contact" class="hover:text-orange-400 transition">تماس با ما</a>
+            </div>
+            <a href="#plans" class="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-md hidden md:block">شروع کنید</a>
+            <button id="menu-toggle" class="md:hidden">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-blue-800 p-4">
+            <a href="#home" class="block py-2 hover:text-orange-400">خانه</a>
+            <a href="#about" class="block py-2 hover:text-orange-400">درباره ما</a>
+            <a href="#services" class="block py-2 hover:text-orange-400">خدمات</a>
+            <a href="#plans" class="block py-2 hover:text-orange-400">طرح‌ها</a>
+            <a href="#coverage" class="block py-2 hover:text-orange-400">مناطق تحت پوشش</a>
+            <a href="#contact" class="block py-2 hover:text-orange-400">تماس با ما</a>
+            <a href="#plans" class="block bg-orange-500 text-white text-center px-4 py-2 rounded-md mt-2">شروع کنید</a>
+        </div>
+    </header>
+
+    <!-- Hero Section (Full Screen) -->
+    <section id="home" class="bg-gradient-to-r from-blue-900 to-blue-700 text-white min-h-screen flex items-center justify-center">
+        <div class="container mx-auto text-center fade-in">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4">اینترنت نامحدود در <span id="location-text" class="text-orange-400 text-cycle">اندخوی</span></h1>
+            <p class="text-lg md:text-xl mb-6">ایشان زاده نوین اینترنت پرسرعت را به خانه‌ها و کسب‌وکارهای سراسر افغانستان ارائه می‌دهد.</p>
+            <a href="#plans" class="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-md text-lg">مشاهده طرح‌ها</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-4 fade-in">
+            <h2 class="text-3xl font-bold text-center mb-8">درباره ما</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">ماموریت ما</h3>
+                    <p>ارائه اینترنت پرسرعت و بدون وقفه به تمام نقاط افغانستان، برای توانمندسازی جوامع و کسب‌وکارها.</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">تاریخچه ما</h3>
+                    <p>ایشان زاده نوین از سال 2024 تاسیس شده و به هزاران مشتری در سراسر افغانستان خدمات وای‌فای ارائه می‌دهد.</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">ارزش‌های ما</h3>
+                    <ul class="list-disc pr-5">
+                        <li>قابلیت اطمینان: تضمین ۹۹.۹٪ زمان فعالیت.</li>
+                        <li>اولویت مشتری: پشتیبانی ۲۴/۷.</li>
+                        <li>نوآوری: ارتقاء مداوم فناوری.</li>
+                    </ul>
+                </div>
+                <div>
+                    <img src="jan.jpg" alt="زیرساخت شبکه" class="rounded-lg shadow-md">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+   <section id="services" class="py-20 bg-gray-100">
+    <div class="container mx-auto px-4 fade-in">
+        <h2 class="text-3xl font-bold text-center mb-12">خدمات ما</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Service 1: Wireless WiFi Services -->
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition transform hover:-translate-y-1">
+                <div class="flex justify-center mb-4">
+                    <svg class="w-12 h-12 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h18M3 9h18M3 15h18M3 21h18"></path></svg>
+                </div>
+                <h3 class="text-xl font-semibold text-center mb-4">خدمات وای‌فای بی‌سیم</h3>
+                <p class="text-gray-600 text-center">ارائه اینترنت بی‌سیم پرسرعت تا ۱ گیگابیت بر ثانیه برای خانه‌ها و کسب‌وکارها.</p>
+            </div>
+            <!-- Service 2: Security Camera Installation -->
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition transform hover:-translate-y-1">
+                <div class="flex justify-center mb-4">
+                    <svg class="w-12 h-12 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+                </div>
+                <h3 class="text-xl font-semibold text-center mb-4">نصب کمره‌های امنیتی</h3>
+                <p class="text-gray-600 text-center">نصب حرفه‌ای دوربین‌های امنیتی برای حفاظت از خانه و محل کار شما.</p>
+            </div>
+            <!-- Service 3: Database Design and Development -->
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition transform hover:-translate-y-1">
+                <div class="flex justify-center mb-4">
+                    <svg class="w-12 h-12 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"></path></svg>
+                </div>
+                <h3 class="text-xl font-semibold text-center mb-4">طراحی و ساخت دیتابیس</h3>
+                <p class="text-gray-600 text-center">طراحی پایگاه‌های داده امن و کارآمد برای مدیریت داده‌های کسب‌وکار شما.</p>
+            </div>
+            <!-- Service 4: Website Design and Development -->
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition transform hover:-translate-y-1">
+                <div class="flex justify-center mb-4">
+                    <svg class="w-12 h-12 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                </div>
+                <h3 class="text-xl font-semibold text-center mb-4">طراحی و ساخت ویب‌سایت</h3>
+                <p class="text-gray-600 text-center">ایجاد وب‌سایت‌های مدرن و responsive برای ارتقاء حضور آنلاین شما.</p>
+            </div>
+            <!-- Service 5: Application Design and Development -->
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition transform hover:-translate-y-1">
+                <div class="flex justify-center mb-4">
+                    <svg class="w-12 h-12 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                </div>
+                <h3 class="text-xl font-semibold text-center mb-4">طراحی و ساخت اپلیکیشن</h3>
+                <p class="text-gray-600 text-center">توسعه اپلیکیشن‌های موبایل کاربرپسند برای iOS و Android.</p>
+            </div>
+            <!-- Service 6: Networking Services -->
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition transform hover:-translate-y-1">
+                <div class="flex justify-center mb-4">
+                    <svg class="w-12 h-12 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg>
+                </div>
+                <h3 class="text-xl font-semibold text-center mb-4">خدمات شبکه‌سازی</h3>
+                <p class="text-gray-600 text-center也好
+
+                <p class="text-gray-600 text-center">پیکربندی و بهینه‌سازی شبکه‌های داخلی و خارجی برای عملکرد بهتر.</p>
+            </div>
+            <!-- Service 7: Graphic Design Services -->
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition transform hover:-translate-y-1">
+                <div class="flex justify-center mb-4">
+                    <svg class="w-12 h-12 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-2a2 2 0 01-2-2V6a3 3 0 013-3m0 0l-1-1m1 1l-1-1m-7 7V6a3 3 0 013-3m0 0l-1-1m1 1l-1-1m-7 7h-2a1 1 0 00-1 1v9a1 1 0 001 1h3a2 2 0 002-2v-4"></path></svg>
+                </div>
+                <h3 class="text-xl font-semibold text-center mb-4">خدمات گرافیک دیزاین</h3>
+                <p class="text-gray-600 text-center">طراحی لوگو، بنر و محتوای بصری برای برندینگ حرفه‌ای.</p>
+            </div>
+            <!-- Service 8: Social Media Management -->
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition transform hover:-translate-y-1">
+                <div class="flex justify-center mb-4">
+                    <svg class="w-12 h-12 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2m-4 0H7a2 2 0 01-2-2v-6a2 2 0 012-2h2m-4 0V6a2 2 0 012-2h2a2 2 0 012 2v2m-4 0h4"></path></svg>
+                </div>
+                <h3 class="text-xl font-semibold text-center mb-4">مدیریت صفحات اجتماعی</h3>
+                <p class="text-gray-600 text-center">مدیریت حرفه‌ای شبکه‌های اجتماعی برای افزایش تعامل و دیده شدن.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Plans Section -->
+    <section id="plans" class="py-20 bg-white">
+    <div class="container mx-auto px-4 fade-in">
+        <h2 class="text-3xl font-bold text-center mb-12">طرح‌های اینترنت</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Plan 1: Limited Packages -->
+            <div class="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-lg transition text-center">
+                <h3 class="text-xl font-semibold mb-4">بسته‌های محدود</h3>
+                <!-- <p class="text-2xl font-bold mb-4">۲۹.۹۹ دلار/ماه</p> -->
+                <ul class="list-disc pr-5 mb-4 text-right">
+                    <li>سرعت تا 1 مگابیت بر ثانیه</li>
+                    <li>محدودیت داده 3 گیگابایت</li>
+                    <li>نصب رایگان</li>
+                </ul>
+            </div>
+            <!-- Plan 2: Unlimited Packages -->
+            <div class="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-lg transition text-center">
+                <h3 class="text-xl font-semibold mb-4">بسته‌های نامحدود</h3>
+                <!-- <p class="text-2xl font-bold mb-4">۴۹.۹۹ دلار/ماه</p> -->
+                <ul class="list-disc pr-5 mb-4 text-right">
+                    <li>سرعت تا 4 مگابیت بر ثانیه</li>
+                    <li>داده نامحدود</li>
+                    <li>روتر رایگان</li>
+                </ul>
+            </div>
+            <!-- Plan 3: Special Packages -->
+            <div class="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-lg transition text-center">
+                <h3 class="text-xl font-semibold mb-4">بسته‌های ویژه</h3>
+                <!-- <p class="text-2xl font-bold mb-4">۷۹.۹۹ دلار/ماه</p> -->
+                <ul class="list-disc pr-5 mb-4 text-right">
+                    <li>سرعت تا 5 مگابیت بر ثانیه</li>
+                    <li>داده نامحدود</li>
+                    <li>پشتیبانی اولویت‌دار و خدمات VIP</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Coverage Section -->
+   <section id="coverage" class="py-20 bg-gray-100">
+    <div class="container mx-auto px-4 fade-in">
+        <h2 class="text-3xl font-bold text-center mb-8">مناطق تحت پوشش</h2>
+        <p class="text-center text-lg text-gray-600 mb-10">بررسی کنید که آیا خدمات وای‌فای ایشان زاده نوین در شهر یا منطقه شما در دسترس است!</p>
+        <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition max-w-4xl mx-auto">
+            <!-- Interactive Map -->
+            <div class="mb-6">
+                  <iframe class="w-full h-96 rounded-lg" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25837.966493342104!2d65.1031!3d36.9529!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f3b0b7b7f943d33%3A0x7f2e3d3b0000000!2sAndkhoy%2C%20Afghanistan!5e0!3m2!1sen!2s!4v1698765432100!5m2!1sen!2s" allowfullscreen="" loading="lazy" title="نقشه پوشش ایشان زاده نوین در اندخوی"></iframe>
+            </div>
+            <!-- Coverage Description -->
+            <p class="text-center text-gray-600 mb-6">ما خدمات پرسرعت اینترنت را در شهرهای کلیدی مانند <span class="text-orange-500 font-semibold">اندخوی، میمنه, قرغان,  و تخار</span> ارائه می‌دهیم. برای مناطق دیگر، با ما تماس بگیرید!</p>
+            <!-- Interactive Availability Check -->
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                <input type="text" id="coverage-check" class="w-full sm:w-80 p-3 border rounded-lg text-right focus:outline-none focus:ring-2 focus:ring-orange-500" placeholder="شهر یا آدرس خود را وارد کنید" aria-label="وارد کردن شهر یا آدرس برای بررسی دسترسی">
+                <button id="check-availability" class="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-lg transition flex items-center gap-2">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                    بررسی دسترسی
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-100">
+    <div class="container mx-auto px-4 fade-in">
+        <h2 class="text-3xl font-bold text-center mb-12">تماس با ما</h2>
+        <div class="max-w-2xl mx-auto bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition">
+            <h3 class="text-xl font-semibold text-center mb-6">اطلاعات تماس</h3>
+            <div class="space-y-4">
+                <!-- Address -->
+                <div class="flex items-center justify-start gap-3">
+                    <svg class="w-6 h-6 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path></svg>
+                    <p><strong>آدرس مرکزی:</strong> شهر اندخوی، مارکت شاروالی، منزل دوم </p>
+                </div>
+                <!-- Phone -->
+                <div class="flex items-center justify-start gap-3">
+                    <svg class="w-6 h-6 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                    <p><strong>تلفن:</strong> <a href="tel:+0781240042" class="hover:text-orange-500 transition">0781240042 & 0790403426</a></p>
+                </div>
+                <!-- Email -->
+                <div class="flex items-center justify-start gap-3">
+                    <svg class="w-6 h-6 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                    <p><strong>ایمیل:</strong> <a href="mailto:ishanzadanaveen@gmail.com" class="hover:text-orange-500 transition">ishanzadanaveen@gmail.com</a></p>
+                </div>
+            </div>
+            <!-- Social Media Icons -->
+            <div class="flex justify-center space-x-6 space-x-reverse mt-8">
+                <a href="https://www.instagram.com/ishanzadanaveen/" target="_blank" rel="noopener noreferrer" class="text-orange-500 hover:text-orange-600 transition" aria-label="اینستاگرام ایشان زاده نوین">
+                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.317 3.608 1.292.975.975 1.23 2.242 1.292 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.317 2.633-1.292 3.608-.975.975-2.242 1.23-3.608 1.292-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.317-3.608-1.292-.975-.975-1.23-2.242-1.292-3.608-.058-1.266-.07-1.646-.07-4.85s.012-3.584.07-4.85c.062-1.366.317-2.633 1.292-3.608.975-.975 2.242-1.23 3.608-1.292 1.266-.058 1.646-.07 4.85-.07m0-2.163c-3.259 0-3.667.014-4.947.072-1.453.066-2.944.403-4.07 1.528-1.125 1.125-1.462 2.616-1.528 4.07C2.014 8.333 2 8.741 2 12s.014 3.667.072 4.947c.066 1.453.403 2.944 1.528 4.07 1.125 1.125 2.616 1.462 4.07 1.528 1.28.058 1.688.072 4.947.072s3.667-.014 4.947-.072c1.453-.066 2.944-.403 4.07-1.528 1.125-1.125 1.462-2.616 1.528-4.07.058-1.28.072-1.688.072-4.947s-.014-3.667-.072-4.947c-.066-1.453-.403-2.944-1.528-4.07-1.125-1.125-2.616-1.462-4.07-1.528C15.667 2.014 15.259 2 12 2z"></path><path d="M12 6.865a5.135 5.135 0 100 10.27 5.135 5.135 0 000-10.27zm0 8.468a3.333 3.333 0 110-6.667 3.333 3.333 0 010 6.667zm5.338-9.87a1.2 1.2 0 11-2.4 0 1.2 1.2 0 012.4 0z"></path></svg>
+                </a>
+                <a href="https://www.facebook.com/people/%D8%A7%DB%8C%D8%B4%D8%A7%D9%86-%D8%B2%D8%A7%D8%AF%D9%87-%D9%86%D9%88%DB%8C%D9%86-Ishan-Zada-Naveen/61561994004859/" target="_blank" rel="noopener noreferrer" class="text-orange-500 hover:text-orange-600 transition" aria-label="فیسبوک ایشان زاده نوین">
+                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H7v-3h3V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.8c4.56-.93 8-4.96 8-9.8z"></path></svg>
+                </a>
+               <a href="https://wa.me/0781240042" target="_blank" rel="noopener noreferrer" class="text-orange-500 hover:text-orange-600 transition" aria-label="واتساپ ایشان زاده نوین">
+                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 22C6.486 22 2 17.514 2 12S6.486 2 12 2s10 4.486 10 10-4.486 10-10 10zm4.875-6.375c-.25-.125-.5-.188-.75-.25-.25-.062-.5-.125-.75-.188-2.5-.875-4.563-2.938-4.688-3.062-.125-.125-.563-.688-1-1.25-.438-.563-.313-.75-.5-1.188-.188-.438-.5-.688-.938-.875-.438-.188-1.125-.313-1.5-.313-.375 0-.75.125-1.125.375-.375.25-.688.563-1.063.938-.375.375-1.125 1.25-1.688 1.875-.563.625-1.125 1.313-1.875 1.563-.75.25-1.375.063-2-.375-.625-.438-1.188-1.188-1.688-1.188-.5 0-.938.375-1.063.938-.125.563-.563 1.063-1.063 1.563H3v1.125h1.375c.375 0 .75-.125 1.125-.375.375-.25.688-.563 1.063-.938.375-.375 1.125-1.25 1.688-1.875.563-.625 1.125-1.313 1.875-1.563.75-.25 1.375-.063 2 .375.625.438 1.188 1.188 1.688 1.188.5 0 .938-.375 1.063-.938.125-.563.563-1.063 1.063-1.563H21V6.75c-.375.25-.75.5-1.125.625z"></path></svg>
+                </a>
+                <a href="mailto:ishanzadanaveen@gmail.com" class="text-orange-500 hover:text-orange-600 transition" aria-label="ایمیل ایشان زاده نوین">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Footer -->
+    <footer class="bg-blue-900 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">ایشان زاده نوین</h3>
+                    <p>ارائه اینترنت پرسرعت در سراسر افغانستان از سال 2024.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">لینک‌های سریع</h3>
+                    <a href="#home" class="block hover:text-orange-400">خانه</a>
+                    <a href="#about" class="block hover:text-orange-400">درباره ما</a>
+                    <a href="#services" class="block hover:text-orange-400">خدمات</a>
+                    <a href="#plans" class="block hover:text-orange-400">طرح‌ها</a>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">پشتیبانی</h3>
+                    <a href="#contact" class="block hover:text-orange-400">تماس با ما</a>
+                    <a href="#" class="block hover:text-orange-400">شرایط خدمات</a>
+                    <a href="#" class="block hover:text-orange-400">سیاست حفظ حریم خصوصی</a>
+                </div>
+               <div>
+    <h3 class="text-lg font-semibold mb-4">ما را دنبال کنید</h3>
+    <div class="flex space-x-6 space-x-reverse">
+        <a href="https://www.instagram.com/ishanzadanaveen/" target="_blank" rel="noopener noreferrer" class="text-orange-500 hover:text-orange-600 transition" aria-label="اینستاگرام ایشان زاده نوین">
+            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.317 3.608 1.292.975.975 1.23 2.242 1.292 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.317 2.633-1.292 3.608-.975.975-2.242 1.23-3.608 1.292-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.317-3.608-1.292-.975-.975-1.23-2.242-1.292-3.608-.058-1.266-.07-1.646-.07-4.85s.012-3.584.07-4.85c.062-1.366.317-2.633 1.292-3.608.975-.975 2.242-1.23 3.608-1.292 1.266-.058 1.646-.07 4.85-.07m0-2.163c-3.259 0-3.667.014-4.947.072-1.453.066-2.944.403-4.07 1.528-1.125 1.125-1.462 2.616-1.528 4.07C2.014 8.333 2 8.741 2 12s.014 3.667.072 4.947c.066 1.453.403 2.944 1.528 4.07 1.125 1.125 2.616 1.462 4.07 1.528 1.28.058 1.688.072 4.947.072s3.667-.014 4.947-.072c1.453-.066 2.944-.403 4.07-1.528 1.125-1.125 1.462-2.616 1.528-4.07.058-1.28.072-1.688.072-4.947s-.014-3.667-.072-4.947c-.066-1.453-.403-2.944-1.528-4.07-1.125-1.125-2.616-1.462-4.07-1.528C15.667 2.014 15.259 2 12 2z"></path><path d="M12 6.865a5.135 5.135 0 100 10.27 5.135 5.135 0 000-10.27zm0 8.468a3.333 3.333 0 110-6.667 3.333 3.333 0 010 6.667zm5.338-9.87a1.2 1.2 0 11-2.4 0 1.2 1.2 0 012.4 0z"></path></svg>
+        </a>
+        <a href="https://www.facebook.com/people/%D8%A7%DB%8C%D8%B4%D8%A7%D9%86-%D8%B2%D8%A7%D8%AF%D9%87-%D9%86%D9%88%DB%8C%D9%86-Ishan-Zada-Naveen/61561994004859/" target="_blank" rel="noopener noreferrer" class="text-orange-500 hover:text-orange-600 transition" aria-label="فیسبوک ایشان زاده نوین">
+            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H7v-3h3V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.8c4.56-.93 8-4.96 8-9.8z"></path></svg>
+        </a>
+        <a href="https://wa.me/0781240042" target="_blank" rel="noopener noreferrer" class="text-orange-500 hover:text-orange-600 transition" aria-label="واتساپ ایشان زاده نوین">
+            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 22C6.486 22 2 17.514 2 12S6.486 2 12 2s10 4.486 10 10-4.486 10-10 10zm4.875-6.375c-.25-.125-.5-.188-.75-.25-.25-.062-.5-.125-.75-.188-2.5-.875-4.563-2.938-4.688-3.062-.125-.125-.563-.688-1-1.25-.438-.563-.313-.75-.5-1.188-.188-.438-.5-.688-.938-.875-.438-.188-1.125-.313-1.5-.313-.375 0-.75.125-1.125.375-.375.25-.688.563-1.063.938-.375.375-1.125 1.25-1.688 1.875-.563.625-1.125 1.313-1.875 1.563-.75.25-1.375.063-2-.375-.625-.438-1.188-1.188-1.688-1.188-.5 0-.938.375-1.063.938-.125.563-.563 1.063-1.063 1.563H3v1.125h1.375c.375 0 .75-.125 1.125-.375.375-.25.688-.563 1.063-.938.375-.375 1.125-1.25 1.688-1.875.563-.625 1.125-1.313 1.875-1.563.75-.25 1.375-.063 2 .375.625.438 1.188 1.188 1.688 1.188.5 0 .938-.375 1.063-.938.125-.563.563-1.063 1.063-1.563H21V6.75c-.375.25-.75.5-1.125.625z"></path></svg>
+        </a>
+        <a href="mailto:ishanzadanaveen@gmail.com" class="text-orange-500 hover:text-orange-600 transition" aria-label="ایمیل ایشان زاده نوین">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+        </a>
+    </div>
+</div>
+            </div>
+            <p class="text-center mt-8">© 2025 ایشان زاده نوین. تمامی حقوق محفوظ است.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Dynamic location text cycling
+        const locations = ['اندخوی', 'میمنه', 'قرغان', 'تخار'];
+        let currentIndex = 0;
+        const locationText = document.getElementById('location-text');
+
+        function cycleLocations() {
+            locationText.textContent = locations[currentIndex];
+            locationText.style.animation = 'none'; // Reset animation
+            void locationText.offsetWidth; // Trigger reflow
+            locationText.style.animation = 'textFade 4s infinite';
+            currentIndex = (currentIndex + 1) % locations.length;
+        }
+
+        cycleLocations(); // Initial call
+        setInterval(cycleLocations, 4000); // Change every 4 seconds
+
+        // Form validation (basic)
+        const form = document.querySelector('form');
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('فرم ارسال شد! (این یک جای‌نگهدار برای مدیریت فرم واقعی است.)');
+        });
+
+         document.getElementById('check-availability').addEventListener('click', () => {
+        const input = document.getElementById('coverage-check').value.trim();
+        if (input) {
+            alert(`در حال بررسی دسترسی در "${input}"... (این یک جای‌نگهدار است. لطفاً برای اطلاعات بیشتر با ما تماس بگیرید.)`);
+        } else {
+            alert('لطفاً شهر یا آدرس خود را وارد کنید.');
+        }
+    });
+    </script>
+</body>
+</html>
