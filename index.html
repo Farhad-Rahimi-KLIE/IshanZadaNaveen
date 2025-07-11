@@ -1,8 +1,29 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
+    <!-- Basic Meta Tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="ایشان زاده نوین - اینترنت پرسرعت در اندخوی">
+    <meta name="description" content="ایشان زاده نوین ارائه‌دهنده اینترنت پرسرعت و نامحدود برای خانه‌ها و کسب‌وکارها در اندخوی، فاریاب و مناطق اطراف. طرح‌های متنوع و پشتیبانی 24/7.">
+    <meta name="keywords" content="اینترنت پرسرعت, وای‌فای اندخوی, اینترنت نامحدود, ایشان زاده نوین, خدمات اینترنت در افغانستان, وای‌فای فاریاب, اینترنت خانگی">
+    <meta name="author" content="ایشان زاده نوین">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="fa">
+
+    <!-- Open Graph Meta Tags (for social media sharing) -->
+    <meta property="og:title" content="ایشان زاده نوین - اینترنت پرسرعت در اندخوی">
+    <meta property="og:description" content="اینترنت پرسرعت و قابل اعتماد با طرح‌های متنوع برای خانه و کسب‌وکار در اندخوی. امروز با ما تماس بگیرید!">
+    <meta property="og:url" content="https://ishanzadanaveen.com">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="ishanzadanaveen">
+
+    <!-- Favicon and Apple Touch Icons -->
+    <link rel="icon" type="image/x-icon" href="jan2.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="jan2.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="jan2.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="jan2.png">
+
     <title>ایشان زاده نوین - ارائه‌دهنده وای‌فای</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
@@ -13,59 +34,99 @@
             font-family: 'Vazirmatn', sans-serif;
             direction: rtl;
         }
-        /* Custom animations */
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+        @keyframes fadeInDown {
+        0% {
+            opacity: 0;
+            transform: translateY(-20px);
         }
-        .fade-in { animation: fadeIn 1s ease-out; }
-        @keyframes textFade {
-            0%, 20% { opacity: 0; transform: translateY(10px); }
-            25%, 75% { opacity: 1; transform: translateY(0); }
-            80%, 100% { opacity: 0; transform: translateY(-10px); }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
         }
-        .text-cycle { animation: textFade 4s infinite; }
+    }
+
+    @keyframes fadeInUp {
+        0% {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .animate-fade-in-down {
+        animation: fadeInDown 1s ease-out forwards;
+    }
+
+    .animate-fade-in-up {
+        animation: fadeInUp 1s ease-out forwards;
+        animation-delay: 0.3s;
+    }
+
+    .animate-pulse {
+        animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+
+    @keyframes pulse {
+        0%, 100% {
+            opacity: 1;
+        }
+        50% {
+            opacity: 0.8;
+        }
+    }
     </style>
 </head>
 <body class="antialiased bg-gray-100 text-gray-800">
     <!-- Header -->
-    <header class="bg-blue-900 text-white sticky top-0 z-50 shadow-lg">
-        <nav class="container mx-auto flex items-center justify-between p-4">
-            <div class="text-2xl font-bold">ایشان زاده نوین</div>
-            <div class="hidden md:flex space-x-6">
-
-                <a href="#home" class="hover:text-orange-400 transition ml-5">خانه</a>
-                <a href="#about" class="hover:text-orange-400 transition">درباره ما</a>
-                <a href="#services" class="hover:text-orange-400 transition">خدمات</a>
-                <a href="#plans" class="hover:text-orange-400 transition">طرح‌ها</a>
-                <a href="#coverage" class="hover:text-orange-400 transition">مناطق تحت پوشش</a>
-                <a href="#contact" class="hover:text-orange-400 transition">تماس با ما</a>
-            </div>
-            <a href="#plans" class="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-md hidden md:block">شروع کنید</a>
-            <button id="menu-toggle" class="md:hidden">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-            </button>
-        </nav>
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-blue-800 p-4">
-            <a href="#home" class="block py-2 hover:text-orange-400">خانه</a>
-            <a href="#about" class="block py-2 hover:text-orange-400">درباره ما</a>
-            <a href="#services" class="block py-2 hover:text-orange-400">خدمات</a>
-            <a href="#plans" class="block py-2 hover:text-orange-400">طرح‌ها</a>
-            <a href="#coverage" class="block py-2 hover:text-orange-400">مناطق تحت پوشش</a>
-            <a href="#contact" class="block py-2 hover:text-orange-400">تماس با ما</a>
-            <a href="#plans" class="block bg-orange-500 text-white text-center px-4 py-2 rounded-md mt-2">شروع کنید</a>
+   <header class="bg-blue-900/90 backdrop-blur-md text-white sticky top-0 z-50 shadow-xl transition-all duration-300">
+    <nav class="container mx-auto px-4 py-4 flex items-center justify-between">
+        <!-- Logo -->
+        <div class="flex items-center gap-3">
+            <img src="jan.jpg" alt="لوگو ایشان زاده نوین" class="h-10 w-auto">
+            <div class="text-xl md:text-2xl font-extrabold animate-fade-in">ایشان زاده نوین</div>
         </div>
-    </header>
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex items-center space-x-8 space-x-reverse">
+            <a href="#home" class="text-lg hover:text-orange-400 transition-transform hover:scale-105">خانه</a>
+            <a href="#about" class="text-lg hover:text-orange-400 transition-transform hover:scale-105">درباره ما</a>
+            <a href="#services" class="text-lg hover:text-orange-400 transition-transform hover:scale-105">خدمات</a>
+            <a href="#plans" class="text-lg hover:text-orange-400 transition-transform hover:scale-105">طرح‌ها</a>
+            <a href="#coverage" class="text-lg hover:text-orange-400 transition-transform hover:scale-105">مناطق تحت پوشش</a>
+            <a href="#contact" class="text-lg hover:text-orange-400 transition-transform hover:scale-105">تماس با ما</a>
+            <a href="#plans" class="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-full font-semibold transition-transform hover:scale-105 flex items-center gap-2">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                شروع کنید
+            </a>
+        </div>
+        <!-- Mobile Menu Toggle -->
+        <button id="menu-toggle" class="md:hidden focus:outline-none">
+            <svg id="menu-open" class="w-8 h-8 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            <svg id="menu-close" class="w-8 h-8 hidden transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+        </button>
+    </nav>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-blue-800/95 backdrop-blur-md p-6 transition-all duration-300">
+        <a href="#home" class="block py-3 text-lg hover:text-orange-400 transition-transform hover:translate-x-2">خانه</a>
+        <a href="#about" class="block py-3 text-lg hover:text-orange-400 transition-transform hover:translate-x-2">درباره ما</a>
+        <a href="#services" class="block py-3 text-lg hover:text-orange-400 transition-transform hover:translate-x-2">خدمات</a>
+        <a href="#plans" class="block py-3 text-lg hover:text-orange-400 transition-transform hover:translate-x-2">طرح‌ها</a>
+        <a href="#coverage" class="block py-3 text-lg hover:text-orange-400 transition-transform hover:translate-x-2">مناطق تحت پوشش</a>
+        <a href="#contact" class="block py-3 text-lg hover:text-orange-400 transition-transform hover:translate-x-2">تماس با ما</a>
+        <a href="#plans" class="block bg-orange-500 hover:bg-orange-600 text-white text-center px-6 py-3 rounded-full font-semibold mt-4 transition-transform hover:scale-105">شروع کنید</a>
+    </div>
+</header>
 
     <!-- Hero Section (Full Screen) -->
-    <section id="home" class="bg-gradient-to-r from-blue-900 to-blue-700 text-white min-h-screen flex items-center justify-center">
-        <div class="container mx-auto text-center fade-in">
-            <h1 class="text-4xl md:text-6xl font-bold mb-4">اینترنت نامحدود در <span id="location-text" class="text-orange-400 text-cycle">اندخوی</span></h1>
-            <p class="text-lg md:text-xl mb-6">ایشان زاده نوین اینترنت پرسرعت را به خانه‌ها و کسب‌وکارهای سراسر افغانستان ارائه می‌دهد.</p>
-            <a href="#plans" class="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-md text-lg">مشاهده طرح‌ها</a>
-        </div>
-    </section>
+    <section id="home" class="min-h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat" style="background-image: url('./wifi2.jpg')">
+    <div class="container mx-auto px-4 text-center">
+        <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 animate-fade-in-down">اینترنت نامحدود در <span id="location-text" class="text-orange-400 font-extrabold text-cycle">اندخوی</span></h1>
+        <p class="text-lg md:text-2xl text-gray-100 mb-8 max-w-3xl mx-auto animate-fade-in-up">ایشان زاده نوین اینترنت پرسرعت و قابل اعتماد را به خانه‌ها و کسب‌وکارهای سراسر <span class="text-orange-400">اندخوی</span> و مناطق اطراف ارائه می‌دهد.</p>
+        <a href="#plans" class="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-full text-lg font-semibold transition-transform hover:scale-105 animate-pulse">مشاهده طرح‌ها</a>
+    </div>
+</section>
 
     <!-- About Section -->
     <section id="about" class="py-20 bg-white">
@@ -333,15 +394,19 @@
         const locationText = document.getElementById('location-text');
 
         function cycleLocations() {
-            locationText.textContent = locations[currentIndex];
-            locationText.style.animation = 'none'; // Reset animation
-            void locationText.offsetWidth; // Trigger reflow
-            locationText.style.animation = 'textFade 4s infinite';
-            currentIndex = (currentIndex + 1) % locations.length;
-        }
+            locationText.classList.remove('animate-fade-in-down');
+            locationText.style.opacity = 0;
 
-        cycleLocations(); // Initial call
-        setInterval(cycleLocations, 4000); // Change every 4 seconds
+            setTimeout(() => {
+                locationText.textContent = locations[currentIndex];
+                locationText.classList.add('animate-fade-in-down');
+                locationText.style.opacity = 1;
+                currentIndex = (currentIndex + 1) % locations.length;
+            }, 500);
+    }
+
+    setInterval(cycleLocations, 3000); // Cycle every 3 seconds
+    cycleLocations(); // Initial call
 
         // Form validation (basic)
         const form = document.querySelector('form');
